@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="bootstrap.css">
     <!--internal CSS styling-->
     <style>
+      
       /*hero, about section, These sections take 70% of screen height and content is vertically centered using flexbox*/
       .hero, .about{
         height: 70vh;
@@ -58,6 +59,12 @@
         min-height: auto;   /*height will be flexible in mobile*/
         height: auto;
         padding: 60px 15px;
+      }
+    }
+    @media (max-width: 768px) {
+      .hero {
+        height: auto;        
+        padding: 1px 0;     
       }
     }
     </style>
@@ -121,7 +128,7 @@
         </div>
     </nav>
     <!--carousel -> main slider component, slide -> enables sliding animation, carousel-fade -> smooth fade effect instead of sliding, data-bs-ride -> auto start slider,data-bs-interval="2500" -> slide changes every 2.5 seconds-->
-    <div id="portfolioSlider" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="2500">
+    <div id="portfolioSlider" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="7000">
         <!--holds all slides-->
         <div class="carousel-inner">
               <!--carousel-item -> slide, active -> first slide visible by default-->
@@ -278,7 +285,7 @@
           <!--text-center -> center text horizontaly-->
           <div class="text-center">
             <!--mb-0 -> remove bottom margin-->
-            <p class="mb-0">© 2026 Portfolio</p>
+            <p class="mb-0">© 2025 Portfolio</p>
           </div>
       </div>
     </footer>
