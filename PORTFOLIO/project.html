@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <!--local bootstrap CSS file-->
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+        body{   /*full height bg-radial gradient same as education*/
+            min-height: 100vh;
+            background: radial-gradient(
+                125% 125% at 50% 10%,
+                #000 40%,
+                #6633ee 100%
+            );
+        }
+        .projects{      /*main section for projects*/
+            text-align: center;   /*center all text*/
+        }
+        .projects ul {      /*remove bullet points from list*/
+            list-style: none;   
+            padding: 0;
+        }
+        .projects li {     /*space b/n list items*/
+            margin: 30px 0;
+        }
+        .projects{    /*with of project section*/
+            width: 80%;       
+            margin: 40px auto;
+            text-align: center;
+        }
+        .projects-table {    /*table styling*/
+            width: 100%;
+            border-collapse: collapse;   /*remove extra border*/
+            margin-top: 20px;
+        }
+        .projects-table th,    /*table cells*/
+        .projects-table td{
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: center;
+        }
+        .projects-table th{     /*table header*/
+            background-color: #0077b6;
+            color: white;
+        }
+        .projects-table tr:nth-child(odd){  /*alternate row color*/
+            background-color: #c6bdbd;
+        }
+        .projects-table a {         /*table links*/
+            text-decoration: none;  /*remove underline*/
+            color: #3498db;       /*link color*/
+            font-weight: bold;
+        }
+        .projects-table a:hover {    /*hover effect if click on github link -> then show underline and change color*/
+            color: #1abc9c;
+            text-decoration: underline;
+        }
+        .projects-table tr:hover {       /*table row hover*/
+            background-color: #d0e8ff; 
+        }
+        .accordion-item {           /*Accordion item*/
+            margin-bottom: 10px;    /*space from bottom*/
+            border-radius: 9px;     /*rounded corner*/
+            overflow: hidden;       /*hide overflow part*/
+        }
+        .accordion-body {           /*accordion content*/
+            text-align: justify;    /*align text from left and right*/
+            line-height: 1.6;       /*gap b/n lines*/
+        }
+    </style>
+    <!--BS CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+     <!--BS JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!--bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body> 
+    <!--exit button(top-right corner), same as education exit btn-->
+    <div class="position-relative mt-3">
+        <div class="position-absolute end-0 top-50 translate-middle-y me-3">
+            <a href="index.html" class="btn btn-danger">Exit</a>
+        </div>
+    </div>
+    <!--projects section-->
+    <section class="projects">
+        <!--heading, mb-5 -> margin bottom, text-center -> center text, text-white -> white color-->
+        <h1 class="text-center m-0"><h1 class="mb-5 text-center text-white">Projects</h1></h1>
+        <!--table, project-table -> custom css style-->
+        <table class="projects-table">
+            <thead>
+                <tr>
+                    <th>
+                        GitHub Link
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <!--github link-->
+                        <a href="https://github.com/Pranav-k-choudhary" target="_blank">My Github</a>
+                        <!--github link for icon-->
+                        <a href="https://github.com/Pranav-k-choudhary" target="_blank">
+                            <!--github icon, bi bi-github -> github icon-->
+                            <i class="bi bi-github" style="font-size:20px; color:#30e142;"></i>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!--accordion -> collapsibl sections, accordion -> Bs collapsible component, mt-5 -> margin top-->
+        <div class="accordion mt-5" id="projectsAccordion">
+
+            <!--accordion item, custom css-->
+            <div class="accordion-item">
+                <!--header-->
+                <h2 class="accordion-header">
+                    <!--accordion-button -> clickable header, data-bs-toggle="collapse" -> enables toggle, data-bs-target="#p1" -> target content-->
+                    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#p1">Amazon Clone</button>
+                </h2>
+                <!--collapse -> hidden by default, data-bs-parent -> only one open at a time-->
+                <div id="p1" class="accordion-collapse collapse" data-bs-parent="#projectsAccordion">
+                    <!--content area-->
+                    <div class="accordion-body">
+                        <!--img-fluid -> responsive image, mb-3 -> margin bottom, rounded-top -> rounded top corners-->
+                        <img src="p1.png" class="img-fluid mb-3 border-rounded rounded-top" alt="" >
+                        <!--project description-->
+                        <p>The Amazon Clone is a frontend web development project built using HTML and CSS. The primary goal of this project is to practice and improve skills in web page structure, layout design, and responsive styling by recreating the interface of a real-world e-commerce platform like Amazon. Currently, the project focuses on designing the visual homepage, which includes a header section with a logo, search bar, and navigation links, a banner section, a product cards layout, and a footer. The design aims to provide a clean, user-friendly experience while closely resembling the original website.
+
+                        This project is still under development and is being improved step by step. At present, it features an Amazon-like homepage layout along with a responsive design implemented using CSS. In the future, the project will be enhanced by adding JavaScript for interactivity, implementing features like cart and login user interface, creating product detail pages, and improving overall responsiveness and animations. This project is currently a work in progress, and more updates will be added in future commits.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#p2">Netflix Clone</button>
+                </h2>
+                <div id="p2" class="accordion-collapse collapse" data-bs-parent="#projectsAccordion">
+                    <div class="accordion-body">
+                        <!--carousel, carousel -> slider, slide -> animation, data-bs-ride -> auto start-->
+                        <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                            <!--holds all slides-->
+                            <div class="carousel-inner">
+                                <!--active -> first slide visible-->
+                                <div class="carousel-item active">
+                                    <!--d-block -> display block, w-100 → full width-->
+                                    <img src="n1.png" class="d-block w-100" alt="Project Image 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="n2.png" class="d-block w-100" alt="Project Image 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="n3.png" class="d-block w-100" alt="Project Image 3">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="n4.png" class="d-block w-100" alt="Project Image 4">
+                                </div>
+                            </div>
+
+                            <!--previous btn-->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <!--next btn-->
+                            <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                        <p>This is a static Netflix-inspired website built using only HTML and CSS. The project focuses on replicating the look and layout of Netflix’s homepage for learning and practicing frontend design skills. It features a modern Netflix-style homepage with a hero section that includes a background image, multiple movie sections with hover effects, and a well-structured UI. The website is fully responsive, providing a smooth experience on both mobile and desktop devices. This project is created to improve skills in HTML page structure, CSS styling, responsive web design, and overall user interface design while building a simple yet visually appealing clone of Netflix.</p>
+                    </div>
+                </div>
+            </div>
+            <!--Over all same concepts use for all sections-->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#p3">Responsive Calculator
+                    </button>
+                </h2>
+                <div id="p3" class="accordion-collapse collapse" data-bs-parent="#projectsAccordion">
+                    <div class="accordion-body">
+                        <img src="cal.png" class="img-fluid mb-3 border-rounded rounded-top" alt="" >
+                        <p>This is a simple and responsive calculator built using HTML, CSS, and JavaScript. It is designed with a clean and modern user interface, making it easy to perform basic arithmetic operations.
+                        The calculator supports operations like addition, subtraction, multiplication, division, and modulus. It displays user input in real-time and includes a clear (C) button to reset calculations quickly.The user interface is interactive, with smooth button click effects, hover states, and a simple layout that enhances usability. The design is fully responsive, The functionality is implemented using JavaScript, where button clicks are handled through event listeners. The input is stored as a string and evaluated using the eval() function, with the result displayed instantly on the screen.
+                        Technologies Used:
+                        HTML, CSS (Grid, Flexbox, Media Queries), and JavaScript (DOM Manipulation and Event Handling).</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#p4">
+                    Rock Paper Scissors Game
+                    </button>
+                </h2>
+                <div id="p4" class="accordion-collapse collapse" data-bs-parent="#projectsAccordion">
+                    <div class="accordion-body">
+                        <img src="r1.png" class="img-fluid mb-3 border-rounded rounded-top" alt="" >
+                        <img src="r2.png" class="img-fluid mb-3 border-rounded rounded-top" alt="" >
+                        <p>This is a simple and interactive Rock Paper Scissors game built using HTML, CSS, and JavaScript, where the user plays against the computer with real-time result display, dynamic score tracking, and a clean, modern, and fully responsive interface that works smoothly across desktop, tablet, and mobile devices. The player selects Rock, Paper, or Scissors while the computer generates a random choice, the winner is decided based on standard circular rules (Rock beats Scissors, Scissors beat Paper, and Paper beats Rock), scores are updated dynamically after each round, draws occur when both choices are the same, and the first player to reach 10 points wins the game, after which it automatically resets for a new match.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#p5">Tic Tac Toe Game
+                    </button>
+                </h2>
+                <div id="p5" class="accordion-collapse collapse" data-bs-parent="#projectsAccordion">
+                    <div class="accordion-body">
+                        <video src="game.mp4" controls style="width: 400px; height: auto;"></video>
+                        <p>This is a simple and interactive Tic Tac Toe game developed using HTML, CSS, and JavaScript, designed with a clean and responsive interface where two players, Player O and Player X, play turn by turn starting with Player O, placing their marks on empty cells while the game automatically checks for a winner after each move based on horizontal, vertical, or diagonal combinations, and declares the result accordingly or allows a reset if all cells are filled without a winner; it also includes features like New Game for starting a fresh match, Reset Game to clear the current board, and an Undo button to revert the last move, making the gameplay smooth and user-friendly.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#p6">Currency Converter
+                    </button>
+                </h2>
+                <div id="p6" class="accordion-collapse collapse" data-bs-parent="#projectsAccordion">
+                    <div class="accordion-body">
+                        <video src="cc.mp4" controls style="width: 400px; height: auto;"></video>
+                        <p>This is a simple and responsive Currency Converter web application built using HTML, CSS, and JavaScript that allows users to convert currencies in real time using live exchange rates fetched from an API, supporting multiple international currencies with dynamic country flags that update based on selection, while providing a fast, clean, and mobile-friendly user interface; the user enters an amount, selects the “From” and “To” currencies, and the app uses Fetch API with async/await to retrieve the latest exchange rates from the Exchange Rate API and displays the converted result instantly, along with country flags from the Flags API, utilizing core concepts like DOM manipulation, event handling, and dynamic UI updates to ensure a smooth and interactive experience.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#p7">
+                    LeetCode Metric Tracker
+                    </button>
+                </h2>
+                <div id="p7" class="accordion-collapse collapse" data-bs-parent="#projectsAccordion">
+                    <div class="accordion-body">
+                    Tracks LeetCode performance using GraphQL API.
+                    Shows stats with circular progress bars and dynamic UI.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#p8">
+                    Password Manager
+                    </button>
+                </h2>
+                <div id="p8" class="accordion-collapse collapse" data-bs-parent="#projectsAccordion">
+                    <div class="accordion-body">
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--scripts-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="bootstrap.js"></script>
+    <script src="bootstrap.bundle.js"></script>
+</body>
+</html>

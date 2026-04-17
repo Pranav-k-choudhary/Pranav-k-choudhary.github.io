@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        /*applies a radial gradient background on the body*/
+        body{
+            min-height: 100vh;               /*ensure full screen height*/
+            background: radial-gradient(
+                125% 125% at 50% 100%,       /*size and position of the gradient:
+                125% width & height makes it larger than screen,50%(center horizontally),100%(bottom vertically)*/
+                #000 40%,  /*black color fills up to 40% of the gradient*/
+                #6633ee 100%  /*purple color fills the remaining area till 100% */
+            );
+        }
+        /*main container box(resume card)*/
+        .container-box{
+            border-radius: 12px;    /*rounded corners*/
+            padding: 20px;          /*space inside box*/
+            background: white;    /*white background*/
+            max-width: 600px;       /*max width of box*/
+            margin: auto;           /*centers box horizontally*/
+        }
+        /*resume img styling*/
+        .resume-img{
+            border-radius: 10px;              /*rounded corners*/
+            cursor: pointer;     /*cursor become pointer on hover*/
+            transition: transform 0.4s ease;    /*smooth animation*/
+        }
+        /*resume img hover effect*/
+        .resume-img:hover{
+            transform: scale(1.05);  /*zoom image on hover */
+        }
+    </style>
+    <!--bootstrap CSS -> for layout and components-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!--exit btn(top-right side), position-relative -> parent element for positioning child, mt-4 -> margin-top-->
+    <div class="position-relative mt-4">
+        <!--position-absolute -> positioned relative to parent,end-0 -> align to right side, top-50 -> move 50% from top,translate-middle-y -> vertically center element, me-3 -> margin on right side-->
+        <div class="position-absolute end-0 top-50 translate-middle-y me-3">
+            <!--btn -> btn style, btn-danger -> red btn-->
+            <a href="index.html" class="btn btn-danger">Exit</a>
+        </div>
+    </div>
+    <!--page heading, text-center -> center align text, text-white -> white text color-->
+    <h1 class="text-center text-white">Resume</h1>
+    <!--resume Box, container-box -> custom class set style using internal css, mt-5 -> margin-top, text-center -> center align content-->
+    <div class="container-box mt-5 text-center">
+        <!--resume img, img-fluid -> responsive image(size adjest automatically), resume-img -> custom class,data-bs-toggle="modal" -> opens modal on click,data-bs-target="#resumeModal" -> connects to modal id-->
+        <img src="r1.jpeg" class="img-fluid resume-img" data-bs-toggle="modal" data-bs-target="#resumeModal">
+        <!--Download Btn, mt-3 -> space top-->
+        <div class="mt-3">
+            <!--download -> downloads file, btn -> btn style,btn-success -> green btn-->
+            <a href="r1.jpeg" download class="btn btn-success">
+                Download Resume
+            </a>
+        </div>
+    </div>
+    <!--modal -> main modal container, fade -> adds smooth animation,id -> used to connect with image click-->
+    <div class="modal fade" id="resumeModal">
+        <!--modal-dialog -> modal structure, modal-xl -> extra large modal size, modal-dialog-centered -> vertically center modal-->
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <!--modal-content -> modal box, border-0 -> remove border-->
+            <div class="modal-content border-0">
+                <!--modal-body -> content area, text-center -> center img-->
+                <div class="modal-body text-center">
+                    <!--img-fluid -> responsive full img-->
+                    <img src="r1.jpeg" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Bootstrap JS(required for modal functionality)-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

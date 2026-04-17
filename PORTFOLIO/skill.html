@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Skills</title>
+    <!--local bs CSS-->
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+        body{     /*body bg same to education body*/
+            min-height: 100vh;
+            background: radial-gradient(
+                125% 125% at 50% 10%,
+                #000 40%,
+                #6633ee 100%
+            );
+        }
+        .skills{       /*skills styling*/
+            text-align: center;     /*center all text*/
+            padding: 40px 20px;     /*space inside section -> top-bottom, left-right*/
+        }
+        .skills-table{      /*table styling*/
+            margin: 0 auto;          /*center table horizontaly*/   
+            border-collapse: collapse;  /*remove double border*/
+            width: 60%;                 /*table width*/
+            text-align: center;         /*center text*/
+        }
+        .skills-table th, .skills-table td{   /*table cells*/
+            border: 2px solid #ccc;   /*border around cells*/
+            padding: 10px 15px;         /*space inside cells*/
+        }
+        .skills-table th {     /*table header*/
+            background-color: #0077b6;   /*blue bg*/
+            color: #fff;                 /*white text*/
+        }
+        .skills-table tr:nth-child(even){
+            background-color: #f2f2f2;     /*light grey*/
+        }
+        .skills-table tr:nth-child(odd){
+            background-color: #d7cccc;    /*dark grey*/
+        } 
+        .skills-table tr:hover{    /*hover effect on the table*/
+            background-color: #d0e8ff;   /*light blue on hover*/
+            cursor: pointer;
+        }
+        .skills-table td{
+            text-align: left;  /*fixed text alignment from left*/
+        }
+    </style>
+    <!--BS CSS -> for buttons, spacing, etc-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!--BS JS -> for interactive components-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <!--exit btn -> top-right side, same to resume exit btn concept-->
+    <div class="position-relative mt-4">
+            <div class="position-absolute end-0 top-50 translate-middle-y me-3">
+                <a href="index.html" class="btn btn-danger">Exit</a>
+            </div>
+    </div>
+    <!--skills part, skills -> custom css styling from inline css-->
+    <section class="skills">
+        <!--mb-5 -> margin-bottom, text-center -> center text,text-white -> white color, m-0 -> remove margin-->
+        <h1 class="mb-5 text-center text-white m-0">My Skills</h1>
+        <!--skill table, skills-table -> custom table styling-->
+        <table class="skills-table">
+            <tr>
+                <th>Skills</th>
+            </tr>
+            <!--skill item-->
+            <tr><td><strong>Programming language: </strong> Java, Python, JavaScript</td></tr>
+            <tr><td><strong>Frontend: </strong> HTML, CSS, BootStrap & JavaScript</td></tr>
+            <tr><td><strong>Backend: </strong> Node.Js & Express.Js</td></tr>
+            <tr><td><strong>Database: </strong> MongoDB & SQL</td></tr>
+            <tr><td><strong>Tools & Platforms: </strong> Github & VS Code</td></tr>
+            <tr><td><strong>Soft Skills: </strong> TeamWork, Critical Thinking and Problem Solving</td></tr>
+            <tr><td>DBMS, DSA</td></tr>
+        </table>
+    </section>
+</body>
+</html>

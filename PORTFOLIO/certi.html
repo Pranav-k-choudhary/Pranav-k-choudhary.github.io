@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates</title>
+    <style>
+        body{     /*body bg same to education*/
+            min-height: 100vh;
+            background: radial-gradient(
+                125% 125% at 50% 10%,
+                #000 40%,
+                #6633ee 100%
+            );
+        }
+        .modal-body img{        /*modal img size control*/
+            max-height: 80vh;   /*img max height = 80% of screen*/
+            width: auto;        /*maintain aspect ratio -> width, height*/
+        }
+    </style>
+    <!--BS CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!--BS JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <!--exit btn same to education page exit btn-->
+    <div class="position-relative mt-5">
+        <div class="position-absolute end-0 top-50 translate-middle-y me-3">
+            <a href="index.html" class="btn btn-danger">Exit</a>
+        </div>
+    </div>
+    <!--container -> Bootstrap fixed width layout, mt-5 -> margin-top-->
+    <div class="container mt-5">
+         <!--row -> Bootstrap grid row, g-4 -> gap between columns-->
+        <div class="row g-4">
+            <!--text-center -> center text, text-white -> white color-->
+            <h1 class="text-center text-white">Certifications</h1>
+
+            <!--card1, col-md-4 -> 3 columns per row on medium screens-->
+            <div class="col-md-4">
+                <!--card -> Bootstrap card component, shadow -> adds box shadow-->
+                <div class="card shadow">
+                    <!--card-img-top -> image at top of card-->
+                    <img src="" class="card-img-top" alt="">
+                    <!--card-body -> padding inside card, text-center -> center content-->
+                    <div class="card-body text-center">
+                        <!--card-title -> card heading-->
+                        <h5 class="card-title">Java full stack Developer Virtual Internship</h5>
+                    <!--btn btn-primary -> blue btn,data-bs-toggle="modal" -> opens modal,data-bs-target -> which modal to open-->
+                    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#certificateModal1">View Certificate</a>
+                </div>
+            </div>
+        </div>
+        
+        <!--same concept repeat for all cards-->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="" class="card-img-top" alt="">
+                <div class="card-body text-center">
+                    <h5 class="card-title">DevOps & cloud Automation Virtual Internship</h5>
+                    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#certificateModal2">View Certificate</a>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="" class="card-img-top" alt="">
+                <div class="card-body text-center">
+                    <h5 class="card-title">AWS Academy Graduate - cloud Foundations - Training Badge</h5>
+                    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#certificateModal3">View Certificate</a>
+                </div>
+            </div>
+        </div>
+
+    
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="" class="card-img-top" alt="">
+                <div class="card-body text-center">
+                    <h5 class="card-title">AWS Academy Graduate - cloud Architecting - Training Badge</h5>
+                    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#certificateModal4">View Certificate</a>
+                </div>
+            </div>
+        </div>
+
+    
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="" class="card-img-top" alt="">
+                <div class="card-body text-center">
+                    <h5 class="card-title">AWARD OF COURSE COMPLETION Database Design</h5>
+                    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#certificateModal5">View Certificate</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--modal1, modal -> Bootstrap modal component, fade -> animation effect-->
+    <div class="modal fade" id="certificateModal1" tabindex="-1">
+        <!--modal-dialog -> modal container, modal-lg -> large size-->
+        <div class="modal-dialog modal-lg">
+            <!--modal-content -> actual box-->
+            <div class="modal-content">
+                <!--modal header-->
+                <div class="modal-header">
+                    <!--title of model-->
+                    <h5 class="modal-title">Certificate</h5>
+                    <!--btn-close -> close icon x,data-bs-dismiss="modal" -> close modal on click-->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <!--modal-body -> content area, text-center -> center image-->
+                <div class="modal-body text-center">
+                    <!--img-fluid -> responsive image-->
+                    <img src="c1.jpg" class="img-fluid" alt="Certificate">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--same modal for all certificate-->
+
+    <div class="modal fade" id="certificateModal2" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Certificate</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="c2.jpeg" class="img-fluid" alt="Certificate">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="certificateModal3" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Certificate</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="c3.png" class="img-fluid" alt="Certificate">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="certificateModal4" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Certificate</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="c4.png" class="img-fluid" alt="Certificate">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="certificateModal5" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Certificate</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="c5.png" class="img-fluid" alt="Certificate">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!--JS files-->
+    <script src="bootstrap.js"></script>
+</body>
+</html>
