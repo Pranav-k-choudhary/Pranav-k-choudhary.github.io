@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
     <style>
+        
         /*applies a radial gradient background on the body*/
-        body{
-            min-height: 100vh;               /*ensure full screen height*/
-            background: radial-gradient(
-                125% 125% at 50% 100%,       /*size and position of the gradient:
+        body {   
+            min-height: 100vh;      /*ensure full screen height*/
+            background: radial-gradient(     
+                125% 125% at 50% 10%,       /*size and position of the gradient:
                 125% width & height makes it larger than screen,50%(center horizontally),100%(bottom vertically)*/
-                #000 40%,  /*black color fills up to 40% of the gradient*/
-                #6633ee 100%  /*purple color fills the remaining area till 100% */
+                #000 40%,      /*black color fills up to 40% of the gradient*/
+                #6633ee 100%    /*purple color fills the remaining area till 100% */
             );
         }
         /*main container box(resume card)*/
@@ -21,7 +22,8 @@
             padding: 20px;          /*space inside box*/
             background: white;    /*white background*/
             max-width: 600px;       /*max width of box*/
-            margin: auto;           /*centers box horizontally*/
+            margin: auto;
+            margin-bottom: 80px;           /*centers box horizontally*/
         }
         /*resume img styling*/
         .resume-img{
@@ -63,7 +65,7 @@
     <!--modal -> main modal container, fade -> adds smooth animation,id -> used to connect with image click-->
     <div class="modal fade" id="resumeModal">
         <!--modal-dialog -> modal structure, modal-xl -> extra large modal size, modal-dialog-centered -> vertically center modal-->
-        <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-dialog modal-md modal-dialog-centered">
             <!--modal-content -> modal box, border-0 -> remove border-->
             <div class="modal-content border-0">
                 <!--modal-body -> content area, text-center -> center img-->

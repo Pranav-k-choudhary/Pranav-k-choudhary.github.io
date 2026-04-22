@@ -15,50 +15,48 @@
                 #6633ee 100%
             );
         }
-        .projects{      /*main section for projects*/
-            text-align: center;   /*center all text*/
-        }
-        .projects ul {      /*remove bullet points from list*/
-            list-style: none;   
-            padding: 0;
-        }
-        .projects li {     /*space b/n list items*/
-            margin: 30px 0;
-        }
         .projects{    /*with of project section*/
             width: 80%;       
             margin: 40px auto;
             text-align: center;
         }
-        .projects-table {    /*table styling*/
+        /*custom table design -> this is not default Bootstrap table,  width 85% -> reduce space on sides, margin:auto -> centers table, backdrop-filter: blur -> creates glass effect, rgba background -> transparent look, border-radius -> rounded corners, overflow:hidden → prevents content overflow outside rounded corners*/
+        .table-custom{
             width: 100%;
-            border-collapse: collapse;   /*remove extra border*/
-            margin-top: 20px;
-        }
-        .projects-table th,    /*table cells*/
-        .projects-table td{
-            border: 1px solid #ccc;
-            padding: 12px;
-            text-align: center;
-        }
-        .projects-table th{     /*table header*/
-            background-color: #0077b6;
+            margin: auto;
+            backdrop-filter: blur(10px);
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            overflow: hidden;
             color: white;
         }
-        .projects-table tr:nth-child(odd){  /*alternate row color*/
-            background-color: #c6bdbd;
+        /*table cells style -> th = table header, td = table data,padding -> space inside cell, text-align -> center align,border -> light transparent border for structure*/
+        .table-custom th, .table-custom td{
+            padding: 15px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
         }
-        .projects-table a {         /*table links*/
-            text-decoration: none;  /*remove underline*/
-            color: #3498db;       /*link color*/
-            font-weight: bold;
+        .table-custom a{
+            color: white;
+            text-decoration: none;
         }
-        .projects-table a:hover {    /*hover effect if click on github link -> then show underline and change color*/
-            color: #1abc9c;
-            text-decoration: underline;
+        /*th style -> bg color set*/
+        .table-custom th{
+            background: #0077b6;
         }
-        .projects-table tr:hover {       /*table row hover*/
-            background-color: #d0e8ff; 
+        /*transition -> makes animation smooth*/
+        .table-custom tr{
+            transition: all 0.3s ease;
+        }
+        /*hover effect -> row hever(tr), transform -> scale(1.02) -> zoom effect*/
+        .table-custom tr:hover{
+            transform: scale(1.02);
+            background: #90e0ef;
+            color: black;
+            cursor: pointer;
+        }
+        .table-custom a:hover{
+            color: black;
         }
         .accordion-item {           /*Accordion item*/
             margin-bottom: 10px;    /*space from bottom*/
@@ -75,6 +73,14 @@
             height: auto;
             display: block;
             margin: 10px auto;
+        }
+        .accordion-item{
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        /*hover effect*/
+        .accordion-item:hover{
+            transform: scale(1.03);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
         }
     </style>
     <!--BS CDN-->
@@ -98,7 +104,7 @@
         <!--heading, mb-5 -> margin bottom, text-center -> center text, text-white -> white color-->
         <h1 class="text-center m-0"><h1 class="mb-5 text-center text-white">Projects</h1></h1>
         <!--table, project-table -> custom css style-->
-        <table class="projects-table">
+        <table class="table-custom">
             <thead>
                 <tr>
                     <th>
@@ -237,7 +243,7 @@
                     </div>
                 </div>
             </div>
-            <div class="accordion-item">
+            <!--<div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#p7">
                     LeetCode Metric Tracker
@@ -249,7 +255,7 @@
                     Shows stats with circular progress bars and dynamic UI.
                     </div>
                 </div>
-            </div>
+            </div>-->
             <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#p8">
