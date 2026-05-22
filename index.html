@@ -27,16 +27,19 @@
         align-items: center;
       }
       .hero{
-        background: #919090;  /*grey bg*/
+        background: gray;  /*grey bg*/
         color: white;         /*text white*/
       }
       .about{
-        background: white;    /*white bg*/
+        background: gray;    /*white bg*/
         color: black;         /*black text */
       }
       /*footer bg color -> dark*/
       .footer{
         background: #111;
+      }
+      .hero img{
+        height: 70vh;
       }
       .footer h5{
         margin-bottom: 15px;    /*space footer heading from bottom*/
@@ -67,6 +70,37 @@
         padding: 1px 0;     
       }
     }
+
+    #toast {
+            visibility: hidden;
+            min-width: 250px;
+            max-width: 20%;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 8px;
+            padding: 12px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1);
+            font-size: 16px;
+            z-index: 99999; 
+        }
+        #toast.show {
+            visibility: visible;
+            animation: fadein 0.3s ease, fadeout 0.5s 2.5s;
+        }
+        @keyframes fadein {
+            from {
+              opacity: 0;
+              transform: translate(-50%, -50%) scale(0.9);
+            }
+            to {
+              opacity: 1;
+              transform: translate(-50%, -50%) scale(1);
+            }
+        }
     </style>
     <!--bootstrap js -> used for components like navbar, modal, carousel-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -79,6 +113,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
+  <!--Toast-->
+    <div id="toast"><strong><span>Welcome to my portfolio 👋 
+                   Explore my work, 
+                   Glad to have you here 🚀, 
+                   Welcome! Check out my projects 💻</span></strong>
+    </div>
+
+
+
     <!--navbar -> bs navbar component, navbar-expand-lg -> navbar expands on large screen, collapse on small screens, navbar-dark -> text color white for dark background, bg-dark -> dark background color, px-5 -> horizontal padding(left & right spacing), sticky-top -> navbar fixed at top while scrolling-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-5 sticky-top">
         <!--navbar-brand -> used for logo ya website name-->
@@ -148,7 +191,7 @@
                       <!--col-md-6 -> 50% width, text-center -> center align text/image-->
                       <div class="col-md-6 text-center">
                         <!--img-fluid -> responsive image(auto resize), hero-img  -> custom class if styling needed-->
-                        <img src="f...jpeg" class="img-fluid hero-img">
+                        <img src="fff1.png" class="img-fluid hero-img">
                       </div>
                     </div>
                   </div>
@@ -162,7 +205,7 @@
                     <div class="row align-items-center">
                       <!--5 out of 12 width column on md size, text in center-->
                       <div class="col-md-5 text-center">
-                        <img src="s...jpeg" class="img-fluid about-img">
+                        <img src="fff.png" class="img-fluid about-img">
                       </div>
                       <!--7 out of 12 width column on md size, text in center-->
                       <div class="col-md-7">
@@ -173,7 +216,7 @@
                             <strong class="d-inline-block mb-2 text-danger"><h2>ABOUT ME</h2></strong>
                             <h3 class="mb-0">
                               <h5 class="card-text mb-auto">
-                                I am a B.Tech student with a strong interest in web development and creating responsive and user-friendly web applications. I have experience working with HTML, CSS, BootStrap and JavaScript, and I enjoy solving problems and learning new technologies. Currently, I am focused on improving my skills and building real-world projects.
+                                I am a B.Tech student with a strong interest in web development and building responsive, user-friendly web applications. I have experience in full-stack development, including frontend, backend, and database management. I continuously work on improving my technical skills and solving problems regularly. Currently, I am focused on enhancing my skills and building real-world projects.
                               </h5>
                             </h3>
                           </div>
@@ -215,12 +258,17 @@
               <!--first link -> leetcode, mb-3 -> margin bottom, btn-outline-primary -> blue border btn, target=_blank -> open it new tab-->
               <div class="mb-3">
                 <label>LeetCode Profile</label><br>
-                <a href="https://leetcode.com/u/pranav_938/" target="_blank" class="btn btn-outline-primary">Open LeetCode</a>
+                <a href="https://leetcode.com/u/pranav_938/" target="_blank" class="btn btn-outline-warning">Open LeetCode</a>
               </div>
               <!--sec link -> gfg, mb-3 -> margin bottom, btn-outline-success -> green border btn, target=_blank -> open it new tab-->
               <div class="mb-3">
                 <label>GFG Profile</label><br>
                 <a href="https://www.geeksforgeeks.org/profile/pranavkumar20efd" target="_blank" class="btn btn-outline-success">Open GFG</a>
+              </div>
+
+              <div class="mb-3">
+                <label>CodeChef Profile</label><br>
+                <a href="https://www.codechef.com/users/flock_seed_45" target="_blank" class="btn btn-outline-primary">Open CodeChef</a>
               </div>
             </form>
           </div>
@@ -290,6 +338,21 @@
     </footer>
 
 
+    <!--for toast-->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toast = document.getElementById("toast");
+            if(!toast){
+                console.log("Toast not found");
+                return;
+            }
+            window.toastShown = true;
+            toast.classList.add("show");
+            setTimeout(() => {
+                toast.classList.remove("show");
+            }, 6000);
+        });
+    </script>
     <!--bootstrap js(required for modal, navbar, carousel)-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!--it's optional not required-->

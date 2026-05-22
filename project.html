@@ -82,6 +82,10 @@
             transform: scale(1.03);
             box-shadow: 0 8px 20px rgba(0,0,0,0.2);
         }
+        img{
+            
+        }
+
     </style>
     <!--BS CDN-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -93,6 +97,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body> 
+
+
+
     <!--exit button(top-right corner), same as education exit btn-->
     <div class="position-relative mt-3">
         <div class="position-absolute end-0 top-50 translate-middle-y me-3">
@@ -268,8 +275,54 @@
                     </div>
                 </div>
             </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#p9">
+                    Expenses Tracker
+                    </button>
+                </h2>
+                <div id="p9" class="accordion-collapse collapse" data-bs-parent="#projectsAccordion">
+                    <div class="accordion-body">
+                        <img src="et.png" class="img-fluid w-100 rounded" alt="">
+                        <p>Built a responsive and user-friendly Expense Tracker web application using React.js and Vite to help users manage daily expenses efficiently. The application allows users to add and delete expenses, automatically calculates total expenses, and stores all data in browser localStorage for persistent access even after page refresh.
+
+                        The project follows a component-based architecture where the App component manages state using useState, stores data using useEffect, and passes data through props to child components like ExpenseForm, ExpenseList, and ExpenseItem. Expense deletion is handled using the filter() method, while total expense calculation is performed using reduce().
+
+                        Additionally, the project integrates Auth0 authentication for secure login and logout functionality, including session persistence and support for social login. The application is fully responsive and optimized for both mobile and desktop devices.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#p10">
+                    Movie Explorer
+                    </button>
+                </h2>
+                <div id="p10" class="accordion-collapse collapse" data-bs-parent="#projectsAccordion">
+                    <div class="accordion-body">
+                        <img src="" class="img-fluid w-100 rounded" alt="">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#p11">
+                    Add Cart
+                    </button>
+                </h2>
+                <div id="p11" class="accordion-collapse collapse" data-bs-parent="#projectsAccordion">
+                    <div class="accordion-body">
+                        <img src="" class="img-fluid w-100 rounded" alt="">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+
+    
 
     <!--scripts-->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
